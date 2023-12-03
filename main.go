@@ -2,7 +2,8 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"/home/rohith/gogingorm/db"
+	// "github.com/avvsrohith/hallbooking_backend/db"
+	"github.com/avvsrohith/hallbooking_backend/database.go/db"
 	"log"
 	"net/http"
 )
