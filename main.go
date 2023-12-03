@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	// "github.com/avvsrohith/hallbooking_backend/db"
-	"github.com/avvsrohith/hallbooking_backend/database.go/db"
+	"github.com/avvsrohith/hallbooking_server_go/models"
 	"log"
 	"net/http"
 )
