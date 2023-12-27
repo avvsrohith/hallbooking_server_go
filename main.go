@@ -4,23 +4,23 @@ import (
 	"github.com/gin-gonic/gin"
 	// "github.com/avvsrohith/hallbooking_backend/db"
 	"github.com/avvsrohith/hallbooking_server_go/models"
+	"github.com/avvsrohith/hallbooking_server_go/routes"
 	"log"
-	"net/http"
+	// "net/http"
 )
 
-func getAlbums(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, "albums")
-}
-
 func main() {
-	db, err := db.Database()
+	db, err := models.Database()
 	if err != nil {
 		log.Println(err)
 	}
 	db.DB()
 
 	router := gin.Default()
-	router.GET("/albums", getAlbums)
+	router.POST("/hall", routes.PostHall)
+	router.GET("/hall", routes.GetHall)
+	router.POST("/event", routes.PostEvent)
+	router.GET("/event", routes.GetEvent)
 
 	router.Run("localhost:8001")
 }
